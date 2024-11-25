@@ -24,10 +24,10 @@ export const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
             <td>
               <img src={employee.image} alt={employee.name} width="50" />
             </td>
-            <td>{employee.name}</td>
-            <td>{employee.job}</td>
-            <td>{new Date(employee.admission_date).toLocaleDateString()}</td>
-            <td>{employee.phone}</td>
+            <td data-label="Nome">{employee.name}</td>
+            <td data-label="Cargo">{employee.job}</td>
+            <td data-label="Data de Admissão">{new Date(employee.admission_date).toLocaleDateString()}</td>
+            <td data-label="Telefone">{employee.phone}</td>
           </tr>
         ))}
       </tbody>
