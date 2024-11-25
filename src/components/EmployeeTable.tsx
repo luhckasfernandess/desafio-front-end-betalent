@@ -1,5 +1,6 @@
 import React from 'react';
 import { Employee } from '../models/Employee';
+import '../styles/Table.css';
 
 interface EmployeeTableProps {
   employees: Employee[];
