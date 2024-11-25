@@ -1,17 +1,17 @@
 import React from 'react';
-import { useUsers } from './controllers/UserController';
-import { UserTable } from './components/UserTable';
+import { useEmployees } from './controllers/EmployeeController';
+import { EmployeeTable } from './components/EmployeeTable';
 
 const App: React.FC = () => {
-  const { users, loading, error } = useUsers();
+  const { employees, loading, error } = useEmployees();
 
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div>
-      <h1>Usuários</h1>
-      <UserTable users={users} />
+      <h1>Funcionários</h1>
+      <EmployeeTable employees={employees} />
     </div>
   );
 };
