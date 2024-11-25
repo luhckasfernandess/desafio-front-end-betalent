@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEmployees } from './controllers/EmployeeController';
 import { EmployeeTable } from './components/EmployeeTable';
+import { SearchInput } from './components/SearchInput';
 
 const App: React.FC = () => {
   const { employees, loading, error, searchTerm, setSearchTerm } = useEmployees();
@@ -11,12 +12,7 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Funcionários</h1>
-      <input
-        type="text"
-        placeholder="Pesquisar por nome, cargo ou telefone"
-        value={searchTerm}
-        onChange={({target}) => setSearchTerm(target.value)}
-      />
+      <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <EmployeeTable employees={employees} />
     </div>
   );
