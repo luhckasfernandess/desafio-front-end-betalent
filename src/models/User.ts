@@ -2,7 +2,7 @@ export interface User {
   id: number;
   name: string;
   job: string;
-  admissionDate: string;
+  admission_date: string;
   phone: string;
-  avatar: string;
+  image: string;
 }
