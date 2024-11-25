@@ -27,7 +27,7 @@ export const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
             </td>
             <td data-label="Nome">{employee.name}</td>
             <td data-label="Cargo">{employee.job}</td>
-            <td data-label="Data de Admissão">{new Date(employee.admission_date).toLocaleDateString()}</td>
+            <td data-label="Data de Admissão">{new Date(employee.admissionDate).toLocaleDateString()}</td>
             <td data-label="Telefone">{employee.phone}</td>
           </tr>
         ))}
