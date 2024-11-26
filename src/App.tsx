@@ -3,6 +3,7 @@ import { useEmployees } from './controllers/EmployeeController';
 import { EmployeeCards } from './components/EmployeeCards';
 import { EmployeeTable } from './components/EmployeeTable';
 import { SearchInput } from './components/SearchInput';
+import { HeaderTable } from './components/HeaderTable';
 
 const App: React.FC = () => {
   const { employees, loading, error, searchTerm, setSearchTerm } = useEmployees();
@@ -12,7 +13,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>Funcionários</h1>
+      <HeaderTable />
       <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <EmployeeCards employees={employees} />
       <EmployeeTable employees={employees} />
