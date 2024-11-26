@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEmployees } from './controllers/EmployeeController';
+import { EmployeeCards } from './components/EmployeeCards';
 import { EmployeeTable } from './components/EmployeeTable';
 import { SearchInput } from './components/SearchInput';
 
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     <div>
       <h1>Funcionários</h1>
       <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <EmployeeCards employees={employees} />
       <EmployeeTable employees={employees} />
     </div>
   );
