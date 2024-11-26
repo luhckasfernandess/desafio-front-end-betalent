@@ -1,87 +1,81 @@
-/* Mobile-First */
+* {
+  font-family: Helvetica;
+}
+
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 10px 0;
-  font-size: 14px;
-  text-align: left;
+  display: none;
 }
 
 th, td {
-  padding: 8px;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #0500FF;
+  color: #FFFFFF;
+}
+
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
   border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: #f1f1f1;
-}
-
-img {
+.employee-header img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  object-fit: cover;
 }
 
-/* Ajustes para telas maiores (Tablet e Desktop) */
+.employee-header h3 {
+  flex: 1;
+  margin: 0 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #0044cc;
+}
+
+.employee-details {
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  color: #555;
+}
+
 @media (min-width: 768px) {
-  table {
-    font-size: 16px;
-    margin: 20px 0;
-  }
-
-  th, td {
-    padding: 12px;
-  }
-
-  img {
-    height: 50px;
-    width: 50px;
-  }
-}
-
-/* Telas pequenas (Mobile) */
-@media (max-width: 480px) {
-  table {
-    border: 0;
-  }
-
-  thead {
+  .employee-card {
     display: none;
   }
 
-  tr {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  td {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-right: 10px;
-    color: #555;
-  }
-
-  img {
-    height: 30px;
-    width: 30px;
+  table {
+    display: table;
   }
 }
