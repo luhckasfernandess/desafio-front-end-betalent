@@ -1,9 +1,6 @@
 import React from 'react';
-import { useEmployees } from './controllers/EmployeeController';
-import { EmployeeCards } from './components/EmployeeCards';
-import { EmployeeTable } from './components/EmployeeTable';
-import { SearchInput } from './components/SearchInput';
-import { HeaderTable } from './components/HeaderTable';
+import { useEmployees } from './controllers';
+import { EmployeeCards, EmployeeTable, SearchInput, HeaderTable } from './components';
 
 const App: React.FC = () => {
   const { employees, loading, error, searchTerm, setSearchTerm } = useEmployees();
