@@ -9,11 +9,13 @@ const App: React.FC = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
+    <div  className='container'>
       <HeaderTable />
-      <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <EmployeeCards employees={employees} />
-      <EmployeeTable employees={employees} />
+      <div>
+        <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <EmployeeCards employees={employees} />
+        <EmployeeTable employees={employees} />
+      </div>
     </div>
   );
 };

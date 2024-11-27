@@ -6,12 +6,15 @@ export const SearchInput: React.FC<SearchInputProps> = ({ searchTerm, setSearchT
   return (
     <div className="title-and-search-input">
       <h1>Funcionários</h1>
-      <input
-        type="text"
-        placeholder="Pesquisar"
-        value={searchTerm}
-        onChange={({ target }) => setSearchTerm(target.value)}
-      />
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Pesquisar"
+          value={searchTerm}
+          onChange={({ target }) => setSearchTerm(target.value)}
+        />
+        <i className="fa fa-search search-icon" aria-hidden="true"></i>
+      </div>
     </div>
   );
 };

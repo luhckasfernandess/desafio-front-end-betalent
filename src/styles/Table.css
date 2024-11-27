@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.container {
+  background-color: #F0F0F0;
+}
+
 .table-container {
   width: 100%;
 }
