@@ -82,4 +82,10 @@ Certifique-se de ter os seguintes softwares instalados:
    ```bash
    yarn dev
    ```
+
 ---
+
+## **🌐 Visualize o projeto online**
+
+Você pode visualizar e interagir com o projeto diretamente pelo link abaixo:
+- [Visualizar Projeto Online](https://desafio-front-end-betalent-luhckasfernandess-projects.vercel.app/)
